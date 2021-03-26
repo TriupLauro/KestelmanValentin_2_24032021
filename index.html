@@ -15,7 +15,7 @@
 				<nav>
 					<p>Hébergements</p>
 					<p>Activités</p>
-					<p>S'inscrire</p>
+					<p><strong>S'inscrire</strong></p>
 				</nav>
 			</header>
 			
@@ -44,13 +44,14 @@
 						<h2>Animaux autorisés</h2>
 					</div>
 				</div>
+				<p id="information">Plus de 500 logements sont disponibles dans cette ville</p>
 			</div>
 			
 			<section id="conteneur_hébergements">
 				<aside id="populaires">
 					<h2>Les plus populaires <!-- Rajouter l'icône --></h2>
 					<div id="liste_populaires">
-						<div class="Carte populaires">
+						<div class="Carte populaire">
 							<figure class="Photo populaire">
 								<img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo de chambre" />
 							</figure>
@@ -136,55 +137,64 @@
 							<p class="Note" id="étoiles_Amina"><!-- 5 étoiles --></p>
 						</div>
 					</div>
+					<p><strong>Afficher Plus</strong></p>
 				</section>
 			</section>
 			
 			<section id="conteneur_activités">
 				<h2>Activités à Marseille</h2>
-				<div class="Carte activité">
-					<figure class="Photo activité longue">
-						<img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Bâteaux amarrés" />
-					</figure>
-					<h3>Vieux Port</h3>
-				</div>
-				
-				<div class="conteneur deux cartes activités">
-					<div class="carte supérieure">
-						<figure class="Photo activité supérieure">
-							<img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort lointain audessus de récifs" />
-						</figure>
-						<h3>Fort de Pomègues</h3>
+				<div id="liste_activités">
+					<div class="Triplette">
+						<div class="Carte activité">
+							<figure class="Photo longue">
+								<img src="images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg" alt="Bâteaux amarrés" />
+							</figure>
+							<h3>Vieux Port</h3>
+						</div>
+						
+						<div class="Conteneur deux cartes">
+							<div class="Carte activité">
+								<figure class="Photo supérieure">
+									<div id="fort_pomègues">
+										<!-- Mit en background à la place de <img src="images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg" alt="Fort lointain audessus de récifs" /> -->
+									</div>
+								</figure>
+								<h3>Fort de Pomègues</h3>
+							</div>
+							
+							<div class="Carte activité">
+								<figure class="Photo inférieure">
+									<img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Longue vue vers une île au loin" />
+								</figure>
+								<h3>Îles du Frioul</h3>
+							</div>
+						</div>
 					</div>
-					
-					<div class="carte inférieure">
-						<figure class="Photo activité inférieure">
-							<img src="images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg" alt="Longue vue vers une île au loin" />
-						</figure>
-						<h3>Îles du Frioul</h3>
-					</div>
-				</div>
-				
-				<div class="Carte activité">
-					<figure class="Photo activité longue">
-						<img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Récif au bord de mer" />
-					</figure>
-					<h3>Parc National des Calanques</h3>
-				</div>
-				
-				<div class="conteneur deux cartes activités">
-					<div class="carte supérieure">
-						<figure class="Photo activité supérieure">
-							<img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Eglise sur une colline avec des arbres, en arrière plan de la ville" />
-						</figure>
-						<h3>Notre-Dame-de-la-Garde</h3>
-					</div>
-					
-					<div class="carte inférieure">
-						<figure class="Photo activité inférieure">
-							<img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Fontaine dans un parc" />
-						</figure>
-						<h3>Parc Longchamp</h3>
-					</div>
+
+					<div class="Triplette">
+						<div class="Carte activité">
+							<figure class="Photo activité longue">
+								<img src="images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg" alt="Récif au bord de mer" />
+							</figure>
+							<h3>Parc National des Calanques</h3>
+						</div>
+						
+						<div class="Conteneur deux cartes">
+							<div class="Carte activité">
+								<figure class="Photo activité supérieure">
+									<img src="images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg" alt="Eglise sur une colline avec des arbres, en arrière plan de la ville" />
+								</figure>
+								<h3>Notre-Dame-de-la-Garde</h3>
+							</div>
+							
+							<div class="Carte activité">
+								<figure class="Photo activité inférieure">
+									<img src="images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg" alt="Fontaine dans un parc" />
+								</figure>
+								<h3>Parc Longchamp</h3>
+							</div>
+						</div>
+					</div>	
 				</div>
 			</section>
 		</div>
@@ -208,6 +218,7 @@
 				<p>Centre d'aide</p>
 				<p>Nous contacter</p>
 			</section>
+
 		</footer>
 	</body>
 </html>
