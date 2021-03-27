@@ -71,6 +71,11 @@ nav
     border: 1px solid black;
 }
 
+.Carte.populaire h3, .Carte.populaire p
+{
+    text-align: center;
+}
+
 /* Hébergements à Marseille */
 #hébergements_Marseille
 {
@@ -88,12 +93,19 @@ nav
 {
     width: 30%;
     height: 30%;
+    margin: auto;
 }
 
 .Carte.Marseille img
 {
     width: 100%;
     height: 100%;
+}
+
+.Carte.Marseille p, .Carte.Marseille h3
+{
+    margin:auto;
+    text-align: center;
 }
 
 /* Activités à Marseille */
@@ -127,6 +139,11 @@ nav
     height: 100%;
 }
 
+#liste_activités h3
+{
+    text-align: center;
+}
+
 /* Contournement pour corriger la photo qui dépasse */
 #fort_pomègues
 {
@@ -135,4 +152,5 @@ nav
     height: 200px;
     background-image: url(images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
     background-position: -70px;
+    background-repeat: no-repeat;
 }
