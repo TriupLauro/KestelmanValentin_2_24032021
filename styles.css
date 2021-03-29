@@ -59,21 +59,78 @@ nav
 }
 
 /* Les plus populaires */
-.Carte.populaire img
+
+.Carte.populaire
 {
-    width: 200px;
-    height: 100px;
+    display: flex;
+    background-color: #FFFFFF;
+    margin : 15% 5%;
+    padding: 1%;
+    flex: 1;
+    border-radius: 0.3em;
+    box-shadow: 0 0.5em 0.5em #cecdcd;
 }
 
 #populaires
 {
     background: #F2F2F2;
-    border: 1px solid black;
+    margin: 0 5% 0 5%;
+    border-radius: 1em;
+}
+
+#populaires h2
+{
+    margin-left: 10%;
+}
+
+.Légende.populaire
+{
+    position: relative;
+    flex: 2;
 }
 
 .Carte.populaire h3, .Carte.populaire p
 {
-    text-align: center;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: -0.5%;
+    /*position: absolute;
+    left: 0;*/
+}
+
+/* Images des cartes populaires */
+
+.Photo.populaire
+{
+    border-radius: 0.3em 0 0 0.3em;
+}
+
+
+#photo_soleil_matin
+{
+    background: url(images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg) center no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 100px;
+    margin: 0;
+}
+
+#coeur_eau
+{
+    background: url(images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg) center no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 100px;
+    margin: 0;
+}
+
+#bleu_blanc
+{
+    background: url(images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg) center no-repeat;
+    background-size: cover;
+    width: 30%;
+    height: 100px;
+    margin: 0;
 }
 
 /* Hébergements à Marseille */
@@ -81,6 +138,7 @@ nav
 {
     background-color: #F2F2F2;
     border: 1px solid black;
+    flex: 3;
 }
 
 #liste_hébergements_Marseille
