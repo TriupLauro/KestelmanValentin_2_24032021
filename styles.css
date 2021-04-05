@@ -18,17 +18,12 @@ footer
     justify-content: space-between;
     background-color: rgb(242,242,242);
     padding: 50px;
+    font-size: 0.8em;
 }
 
-footer a
+footer section
 {
-    color: black;
-    text-decoration: none;
-}
-
-.invisible
-{
-    visibility: hidden;
+    width: 30rem;
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -38,18 +33,54 @@ footer a
 {
     display: flex;
     justify-content: space-between;
-}
-
-#logo
-{
-    flex: 3;
+    /* Si position: fixed est actif, modifie la mise en page
+    Problème restant, le reste de la page se met en superposition*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; 
+    /* width: 100%;  */
+    /*Toujours visible */
+    z-index: 1;
+    background-color: #FFF;
 }
 
 nav
 {
     display: flex;
-    flex: 1;
     justify-content: space-between;
+    width: 33%; 
+}
+
+ .box.nav
+{
+    width: 100%;
+    /*padding: 0 6%;*/
+    /* Faire coïncider la barre bleu avec le haut */
+    /*position: relative;
+    top: -10%;*/
+} 
+
+.box.nav:nth-child(1)
+{
+    border-top: 2px solid #0065FC;
+}
+
+nav p
+{
+    text-align: center;
+}
+
+
+
+/* nav a:focus
+{
+    border-top: 2px solid #0065FC;
+} */
+
+nav p strong
+{
+    color: #0065FC;
 }
 
 /* ------------------------------------------------------------------------------------- */
@@ -60,7 +91,20 @@ nav
 {
     display: flex;
     flex-direction: column;
+    justify-content: baseline;
+    /*Besoin de le séparer de sous le header */
+    padding-top: 75px;
+    padding-bottom: 25px;
 }
+
+/* Rapproche tout ce qui est dans le conteneur recherche*/
+#conteneur_recherche *
+{
+    padding: 0;
+    margin: 0;
+}
+
+
 
 #conteneur_filtres
 {
@@ -82,6 +126,7 @@ nav
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    font-size: 0.9em;
 }
 
 /* Les plus populaires */
@@ -90,7 +135,7 @@ nav
 {
     display: flex;
     background-color: #FFFFFF;
-    margin : 10% 5%;
+    margin : 5%;
     padding: 1%;
     border-radius: 1em;
     box-shadow: 0 0.5em 0em #ECECEC;
@@ -210,82 +255,69 @@ nav
     margin-left: 1%;
 }
 
-#liste_hébergements_Marseille
+#liste_hebergements_Marseille
 {
     display: flex;
     flex-wrap: wrap;
 }
 
-#liste_hébergements_Marseille a
+#liste_hebergements_Marseille a
 {
-    width: 30%;
+    width: 242px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin: 2% 1%;
-    padding: 0.5%;
+    margin: 0.5rem;
+    padding: 0.2rem;
     background-color: #FFFFFF;
-    color: black;
-    text-decoration: none;
     border-radius: 1em;
     box-shadow: 0 0.5em 0 #ECECEC;
 }
 
-.Carte.Marseille
+.Carte_Marseille
 {
     height: 200px;
     display: flex;
     flex-direction: column;
 }
 
-.Photo.hébergement.Marseille
+.Photo_hebergement_Marseille
 {
     object-fit: cover;
     flex: 6;
-}
-
-.Légende.hébergement
-{
-    flex: 4;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.Légende.hébergement h3
-{
-    font-size: 0.9em;
-}
-
-.Légende.hébergement p
-{
-    font-size: 0.8em;
-}
-
-
-.Carte.Marseille img
-{
-    width: 100%;
+    width: auto;
     height: 100%;
     border-radius: 0.9em 0.9em 0 0;
 }
 
-.Carte.Marseille p, .Carte.Marseille h3
+.Legende_hebergement h3
+{
+    font-size: 0.9em;
+    padding: 0;
+}
+
+.Legende_hébergement p
+{
+    font-size: 0.8rem;
+    padding: 0;
+}
+
+.Carte_Marseille p, .Carte_Marseille h3
 {
     text-align: left;
-    margin: 1%;
+    margin: 0.1rem;
+    flex: 1;
 }
 
-.Carte.Marseille .Note
+.Carte_Marseille .Note
 {
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
-#afficher_plus
+/* #afficher_plus
 {
     margin-top: 4%;
-}
+} */
 
 #afficher_plus a
 {
@@ -296,29 +328,35 @@ nav
 /* --------------------------------------------------------------------------------------------- */
 
 /* Activités à Marseille */
+
 #conteneur_activités h2
 {
+    /*Alignement du titre*/
     margin-left: 2%;
 }
 
 #liste_activités
 {
     display: flex;
-    margin-bottom: 50px;
     justify-content: space-between;
+    margin-bottom: 50px;
+    /* Alignement avec les bords gauche et droit de l'encart hébergement */
+    margin-right: 0.6%;
+    margin-left: -0.3%;
 }
 
 #liste_activités a.longue
 {
     height: 100%;
-    color: black;
-    text-decoration: none;
-    /*box-shadow: 0 0.5em 0 #ECECEC;*/
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
     border-radius: 1em;
-    margin: 0 4%;
+    margin: 0 3%;
+}
+
+a.Carte.activité
+{
+    box-shadow: 0 1px 5px 5px #ECECEC;
 }
 
 .Photo.activité.longue
@@ -329,32 +367,29 @@ nav
 .Triplette
 {
     display: flex;
-    height: 455px;
+    height: 445px;
 }
 
 .Carte.activité.supérieure.col2
 {
     height: 53%;
-    border: 1px solid black;
     border-radius: 1em;
-    box-shadow: 0 1px 0 #f0f0f0;
 }
 
 .Photo.supérieure.col2
 {
-    height: 75%;
+    height: 80%;
 }
 
 .Carte.activité.inférieure.col2
 {
     height: 37%;
-    border: 1px solid black;
     border-radius: 1em;
 }
 
 .Photo.inférieure.col2
 {
-    height: 65%;
+    height: 70%;
 }
 
 .Conteneur.deux.cartes
@@ -362,30 +397,28 @@ nav
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 2%;
+    margin: 0 1.5%;
 }
 
 .Carte.activité.supérieure.col4
 {
-    height: 43%;
-    border: 1px solid black;
+    height: 44%;
     border-radius: 1em;
 }
 
 .Photo.activité.supérieure.col4
 {
-    height: 70%;
+    height: 75%;
 }
 
 .Photo.activité.inférieure.col4
 {
-    height: 72%;
+    height: 75%;
 }
 
 .Carte.activité.inférieure.col4
 {
     height: 46%;
-    border: 1px solid black;
     border-radius: 1em;
 }
 
@@ -401,8 +434,9 @@ nav
 {
     text-align: left;
     margin: 0;
-    padding: 5% 0;
+    padding: 5%;
     height: 30px;
+    font-size: 1em;
 }
 
 /* Contournement pour corriger la photo qui dépasse */

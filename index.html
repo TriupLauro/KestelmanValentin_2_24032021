@@ -18,9 +18,16 @@
 					<img src="images/logo/Reservia.svg" alt="Logo Reservia" />
 				</figure>
 				<nav>
-					<p>Hébergements</p>
-					<p>Activités</p>
-					<p><strong>S'inscrire</strong></p>
+					<div class="box nav">
+						<p><a href="#conteneur_hébergements">Hébergements</a></p>
+					</div>
+					<div class="box nav">
+						<p><a href="#conteneur_activités">Activités</a></p>
+					</div>
+					<div class="box nav">
+						<p><a href="#"><strong>S'inscrire</strong></a></p>
+					</div>
+						
 				</nav>
 			</header>
 			
@@ -49,7 +56,7 @@
 						<h2>Animaux autorisés</h2>
 					</div>
 				</div>
-				<p id="information">Plus de 500 logements sont disponibles dans cette ville</p>
+				<p id="information"><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</p>
 			</div>
 			
 			<section id="conteneur_hébergements">
@@ -93,70 +100,52 @@
 				
 				<section id="hébergements_Marseille">
 					<h2>Hébergements à Marseille</h2>
-					<div id="liste_hébergements_Marseille">
-						<a href="#">
-							<div class="Carte Marseille">
-								<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo mezzanine avec fenêtre" class="Photo hébergement Marseille"/>
-								<div class="Légende hébergement">
-									<h3>Auberge la Cannebière</h3>
-									<p>Nuit à partir de <strong>25 €</strong></p>
-									<p class="Note" id="étoiles_cannebière"><!-- 4 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i></p>
-								</div>
-							</div>
+					<div id="liste_hebergements_Marseille">
+						<a href="#" class="Carte_Marseille">
+							<img src="images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg" alt="Photo mezzanine avec fenêtre" class="Photo_hebergement_Marseille"/>
+							<h3>Auberge la Cannebière</h3>
+							<p>Nuit à partir de <strong>25 €</strong></p>
+							<p class="Note" id="étoiles_cannebière"><!-- 4 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i></p>	
 						</a>
 
-						<a href="#">
-							<div class="Carte Marseille">
-								<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo deux lits simples, fenêtre avec rideaux" class="Photo hébergement Marseille"/>
-								<div class="Légende hébergement">
-									<h3>Hôtel du port</h3>
-									<p>Nuit à partir de 52€</p>
-									<p class="Note" id="étoiles_hôtel_port"><!-- 5 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i></p>
-								</div>
-							</div>
+						<a href="#" class="Carte_Marseille">
+							<img src="images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg" alt="Photo deux lits simples, fenêtre avec rideaux" class="Photo_hebergement_Marseille"/>
+							<h3>Hôtel du port</h3>
+							<p>Nuit à partir de 52€</p>
+							<p class="Note" id="étoiles_hôtel_port"><!-- 5 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i></p>
 						</a>
 						
-						<a href="#">
-							<div class="Carte Marseille">
-								<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo lit simple avec lampe et armoire-miroir" class="Photo hébergement Marseille"/>
-								<div class="Légende hébergement">
-									<h3>Hôtel Les mouettes</h3>
-									<p>Nuit à partir de 76€</p>
-									<p class="Note" id="étoiles_mouettes"><!-- 4 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i></p>
-								</div>
-							</div>
+						<a href="#" class="Carte_Marseille">
+							<img src="images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg" alt="Photo lit simple avec lampe et armoire-miroir" class="Photo_hebergement_Marseille"/>
+							<h3>Hôtel Les mouettes</h3>
+							<p>Nuit à partir de 76€</p>
+							<p class="Note" id="étoiles_mouettes"><!-- 4 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i></p>	
 						</a>
 
-						<a href="#">
-							<div class="Carte Marseille">
-								<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo lit double avec peinture du ciel" class="Photo hébergement Marseille"/>
-								<div class="Légende hébergement">
-									<h3>Hôtel de la mer</h3>
-									<p>Nuit à partir de 45€</p>
-									<p class="Note" id="étoiles_hôtel_mer"><!-- 3 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i><i class="fas fa-star gris"></i></p>
-								</div>
+						<a href="#" class="Carte_Marseille">
+							<img src="images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg" alt="Photo lit double avec peinture du ciel" class="Photo_hebergement_Marseille"/>
+							<div class="Legende_hebergement">
+								<h3>Hôtel de la mer</h3>
+								<p>Nuit à partir de 45€</p>
+								<p class="Note" id="étoiles_hôtel_mer"><!-- 3 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i><i class="fas fa-star gris"></i></p>
 							</div>
 						</a>
 						
-						<a href="#">
-							<div class="Carte Marseille">
-								<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo deux mezzanines en bois" class="Photo hébergement Marseille"/>
-								<div class="Légende hébergement">
-									<h3>Auberge Le Panier</h3>
-									<p>Nuit à partir de <strong>23€</strong></p>
-									<p class="Note" id="étoiles_panier"><!-- 4 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i></p>
-								</div>
-							</div>
+						<a href="#" class="Carte_Marseille">
+							<img src="images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg" alt="Photo deux mezzanines en bois" class="Photo_hebergement_Marseille"/>
+							<div class="Legende_hebergement">
+								<h3>Auberge Le Panier</h3>
+								<p>Nuit à partir de <strong>23€</strong></p>
+								<p class="Note" id="étoiles_panier"><!-- 4 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star gris"></i></p>
+							</div>	
 						</a>
 						
-						<a href="#">
-							<div class="Carte Marseille">
-								<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo lit simple avec bureau et fenêtre" class="Photo hébergement Marseille"/>
-								<div class="Légende hébergement">
-									<h3>Hôtel chez Amina</h3>
-									<p>Nuit à partir de 96€</p>
-									<p class="Note" id="étoiles_Amina"><!-- 5 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i></p>
-								</div>
+						<a href="#" class="Carte_Marseille">
+							<img src="images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg" alt="Photo lit simple avec bureau et fenêtre" class="Photo_hebergement_Marseille"/>
+							<div class="Legende_hebergement">
+								<h3>Hôtel chez Amina</h3>
+								<p>Nuit à partir de 96€</p>
+								<p class="Note" id="étoiles_Amina"><!-- 5 étoiles --><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i><i class="fas fa-star bleu"></i></p>
 							</div>
 						</a>
 
@@ -228,10 +217,6 @@
 				<h2>Assistance</h2>
 				<p><a href="#">Centre d'aide</a></p>
 				<p><a href="#">Nous contacter</a></p>
-			</section>
-
-			<section class="invisible" id="colonne_quatre">
-				<h2>Mise en page</h2>
 			</section>
 
 		</footer>
