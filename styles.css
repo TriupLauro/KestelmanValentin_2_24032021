@@ -18,7 +18,7 @@ footer
     justify-content: space-between;
     background-color: rgb(242,242,242);
     padding: 2rem;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 footer section
@@ -41,32 +41,52 @@ footer section
     right: 0;  */
     /* width: 100%;  */
     /*Toujours visible */
-    z-index: 1;
-    background-color: #FFF;
+    /* z-index: 1;
+    background-color: #FFF; */
+    /* Pour coller le haut du conteneur au haut de la page */
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+}
+
+#logo
+{
+    padding-top: 2rem;
+}
+
+#conteneur_nav
+{
+    display: flex;
+    justify-content: space-between;
+    width: 30rem; 
 }
 
 nav
 {
     display: flex;
-    justify-content: space-between;
-    width: 33%; 
 }
 
- .box.nav
+ .box_nav, .box_inscrire
 {
-    width: 100%;
+    width: 10rem;
+    padding-top: 2rem;
+    border-top: 2px solid #FFF;
     /*padding: 0 6%;*/
     /* Faire coïncider la barre bleu avec le haut */
     /*position: relative;
     top: -10%;*/
 } 
 
-.box.nav:nth-child(1)
+.box_nav:nth-child(1)
 {
     border-top: 2px solid #0065FC;
 }
 
-nav p
+.box_nav:nth-child(1) a
+{
+    color: #0065FC;
+}
+
+#conteneur_nav p
 {
     text-align: center;
 }
@@ -78,7 +98,7 @@ nav p
     border-top: 2px solid #0065FC;
 } */
 
-nav p strong
+.box_inscrire strong
 {
     color: #0065FC;
 }
@@ -87,24 +107,76 @@ nav p strong
 
 /* Titre avec barre de recherche et filtres */
 
+h1
+{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+#conteneur_recherche p
+{
+    margin-top: 0.5rem;
+}
+
 #conteneur_recherche
 {
     display: flex;
     flex-direction: column;
     justify-content: baseline;
     /*Besoin de le séparer de sous le header */
-    padding-top: 75px;
     padding-bottom: 25px;
+    margin: 0 1rem;
 }
 
 /* Rapproche tout ce qui est dans le conteneur recherche*/
-#conteneur_recherche *
+/* #conteneur_recherche *
 {
     padding: 0;
     margin: 0;
+} */
+
+form input, form label
+{
+    border: none;
+    font-size: 1.2rem;
 }
 
+#conteneur_recherche form
+{
+    /* background-color: #F2F2F2; */
+    border-radius: 0.5rem;
+    width: auto;
+    padding: 0;
+}
 
+#barre_recherche
+{
+    padding: 0.875rem 1.2rem;
+    width: 15rem;
+    border-top: 1px solid#F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+input[type="submit"]
+{
+    background-color: #0065FC;
+    color: #FFF;
+    border-radius: 0 1rem 1rem 0;
+    padding: 0.9rem 1.2rem 0.9rem 1.2rem;
+}
+
+form label
+{
+    background-color: #F2F2F2;
+    padding: 1rem 1.2rem 0.9rem 1.2rem;
+    border-radius: 1rem 0 0 1rem;
+}
+
+/* Ne fonctionne que sur chrome */
+input::placeholder
+{
+    color: black;
+}
 
 #conteneur_filtres
 {
@@ -114,10 +186,54 @@ nav p strong
 
 #conteneur_filtres div
 {
-    border: #F2F2F2 1px solid;
-    margin: 0 1% 0 1%;
+    margin: 0 1rem;
+    padding: 0;
+    border-radius: 2rem;
 }
 
+#titre_filtres
+{
+    margin: auto 0;
+}
+
+#conteneur_filtres h2
+{
+    font-size: 1rem;
+}
+
+#information
+{
+    margin: 0;
+}
+
+#information i
+{
+    margin: 0 0.5rem;
+}
+
+.filtre i
+{
+    padding: 1rem;
+    margin: 0 1rem 0 0;
+    border-radius: 2rem;
+    color:#0065FC;
+    background-color: #DEEBFF;
+    z-index: 1;
+}
+
+.filtre h2
+{
+    border: 2px solid #F2F2F2;
+    border-left: none;
+    border-radius: 2rem;
+    padding-right: 1rem;
+}
+
+.filtre h2:hover
+{
+    background-color: #DEEBFF;
+    color: #0065FC;
+}
 /* --------------------------------------------------------------------------------------- */
 /* Hébergements */
 
