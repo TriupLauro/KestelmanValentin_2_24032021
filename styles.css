@@ -35,10 +35,10 @@ footer section
     justify-content: space-between;
     /* Si position: fixed est actif, modifie la mise en page
     Problème restant, le reste de la page se met en superposition*/
-    position: fixed;
-    top: 0;
+    position: static;
+    /* top: 0;
     left: 0;
-    right: 0; 
+    right: 0;  */
     /* width: 100%;  */
     /*Toujours visible */
     z-index: 1;
@@ -126,70 +126,63 @@ nav p strong
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    font-size: 0.9em;
+    font-size: 0.9rem;
 }
 
 /* Les plus populaires */
 
-.Carte.populaire
+.Carte_populaire
 {
     display: flex;
     background-color: #FFFFFF;
-    margin : 5%;
-    padding: 1%;
-    border-radius: 1em;
-    box-shadow: 0 0.5em 0em #ECECEC;
+    height: 7rem;
+    margin : 1rem;
+    padding: 0.25rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 0 #ECECEC;
 }
 
 #populaires
 {
     background: #F2F2F2;
-    margin: 0 1.2%;
-    padding: 0 1.2%;
-    border-radius: 1em;
+    margin: 0 1rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
     flex: 1;
-}
-
-#liste_populaires a
-{
-    color: black;
-    text-decoration: none;
 }
 
 #populaires h2
 {
-    margin: 5% 5% 0 5%;
-    padding-top: 5%;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1rem 0 1rem;
+    padding-top: 1rem;
 }
 
-.fa-chart-line
+.Legende_populaire
 {
-    position: absolute;
-    right: 0;
-}
-
-.Légende.populaire
-{
-    position: relative;
     flex: 10;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.Carte.populaire h3, .Carte.populaire p
+.Carte_populaire h3, .Carte_populaire p
 {
     text-align: left;
-    margin: 3% 15%;
-    font-size: 1em;
+    margin: 0;
+    padding: 0.2rem 1rem;
+    font-size: 1rem;
     /*position: absolute;
     left: 0;*/
 }
 
 /* Les étoiles des cartes populaires */
-.Carte.populaire .Note
+.Carte_populaire .Note
 {
     font-size: 0.8em;
-    position: absolute;
-    bottom: 1px;
+    margin-top: auto;
 }
 
 .fas.bleu
@@ -207,8 +200,8 @@ nav p strong
 .Photo.populaire.cover
 {
     object-fit: cover;
-    width: 100%;
-    height: 136px;
+    width: 5rem;
+    height: 7rem;
     flex: 6;
     border-radius: 0.9em 0 0 0.9em;
 }
@@ -244,15 +237,17 @@ nav p strong
 #hébergements_Marseille
 {
     background-color: #F2F2F2;
-    margin: 0 1.2%;
-    padding: 1%;
-    border-radius: 1em;
+    margin: 0 0.9rem;
+    padding: 0.9rem;
+    border-radius: 1rem;
     flex: 2;
+    display: flex;
+    flex-direction: column;
 }
 
 #hébergements_Marseille h2
 {
-    margin-left: 1%;
+    margin-left: 0.9rem;
 }
 
 #liste_hebergements_Marseille
@@ -263,22 +258,16 @@ nav p strong
 
 #liste_hebergements_Marseille a
 {
-    width: 242px;
+    width: 15rem;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin: 0.5rem;
+    margin: 0.9rem 0.6rem;
     padding: 0.2rem;
     background-color: #FFFFFF;
     border-radius: 1em;
     box-shadow: 0 0.5em 0 #ECECEC;
-}
-
-.Carte_Marseille
-{
-    height: 200px;
-    display: flex;
-    flex-direction: column;
 }
 
 .Photo_hebergement_Marseille
@@ -286,7 +275,7 @@ nav p strong
     object-fit: cover;
     flex: 6;
     width: auto;
-    height: 100%;
+    height: 5rem;
     border-radius: 0.9em 0.9em 0 0;
 }
 
@@ -319,10 +308,9 @@ nav p strong
     margin-top: 4%;
 } */
 
-#afficher_plus a
+#afficher_plus
 {
-    color: black;
-    text-decoration: none;
+    margin: auto 0.7rem;
 }
 
 /* --------------------------------------------------------------------------------------------- */
@@ -332,7 +320,7 @@ nav p strong
 #conteneur_activités h2
 {
     /*Alignement du titre*/
-    margin-left: 2%;
+    margin-left: 1rem;
 }
 
 #liste_activités
