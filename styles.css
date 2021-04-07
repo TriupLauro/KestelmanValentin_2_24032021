@@ -56,6 +56,7 @@ footer section
 #conteneur_nav
 {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: space-between;
     width: 30rem; 
 }
@@ -178,10 +179,16 @@ input::placeholder
     color: black;
 }
 
+input:focus
+{
+    outline: none;
+}
+
 #conteneur_filtres
 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 #conteneur_filtres div
@@ -237,7 +244,7 @@ input::placeholder
 /* --------------------------------------------------------------------------------------- */
 /* Hébergements */
 
-#conteneur_hébergements
+#conteneur_hebergements
 {
     display: flex;
     flex-direction: row-reverse;
@@ -313,7 +320,7 @@ input::placeholder
 
 /* Images des cartes populaires - il faut remplacer les background en css par des img en htm */
 
-.Photo.populaire.cover
+.Photo_populaire_cover
 {
     object-fit: cover;
     width: 5rem;
@@ -350,7 +357,7 @@ input::placeholder
 }*/
 
 /* Hébergements à Marseille */
-#hébergements_Marseille
+#hebergements_Marseille
 {
     background-color: #F2F2F2;
     margin: 0 0.9rem;
@@ -361,7 +368,7 @@ input::placeholder
     flex-direction: column;
 }
 
-#hébergements_Marseille h2
+#hebergements_Marseille h2
 {
     margin-left: 0.9rem;
 }
@@ -489,6 +496,7 @@ a.Carte_activite_longue
 {
     height: 14rem;
     width: 19rem;
+    border-radius: 1rem 1rem 0 0;
     object-fit: cover;
 }
 
@@ -570,3 +578,106 @@ a.Carte_activite_longue
     background-position: -70px;
     background-repeat: no-repeat;
 }*/
+
+/*-------------------------------------------------------------------------------*/
+/*Version mobile */
+
+@media screen and (max-width: 1280px)
+{
+    /*Header mobile */
+    #conteneur_nav
+    {
+        flex-direction: column;
+    } 
+
+
+    #logo
+    {
+        padding-top: 0;
+    }
+
+    .box_nav:nth-child(1)
+    {
+        border-top: none;
+    }
+
+    /*Hébergements et populaires mobile */
+    #conteneur_hebergements
+    {
+        flex-direction: column;
+    }
+
+    #populaires
+    {
+        margin: 0;
+    }
+
+    #hebergements_Marseille
+    {
+        margin: 0;
+        padding: 0;
+        background-color: #FFF;
+    }
+
+    #liste_hebergements_Marseille
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #liste_hebergements_Marseille a
+    {
+        width: 35rem;
+        height: 15rem;
+    }
+
+    #afficher_plus
+    {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+    }
+
+    /*Activités version mobile */
+    #conteneur_activités
+    {
+        width: auto;
+        margin: auto;
+    }
+    
+    #liste_activites
+    {
+        flex-direction: column;
+        margin-bottom: 1rem;
+        width: auto;
+        align-items: center;
+    }
+    .Triplette
+    {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+    a.Carte_activite_longue, .Carte_activite_superieure_col2, .Carte_activite_inferieure_col2, .Carte_activite_superieure_col4, .Carte_activite_inferieure_col4
+    {
+        height: 15rem;
+        width: 35rem;
+        margin: 1rem 0;
+        flex: 1;
+    }
+    .Photo_activite_longue, .Photo_superieure_col2, .Photo_inferieure_col2, .Photo_activite_superieure_col4, .Photo_activite_inferieure_col4
+    {
+        height: 11rem;
+        width: 35rem;
+    }
+
+    /*Pied de page mobile */
+    footer
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    /* footer section
+    {
+        width: 30rem;
+    } */
+}

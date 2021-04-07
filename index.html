@@ -16,6 +16,9 @@
 		<header id="principal">
 			<img src="images/logo/Reservia.svg" alt="Logo Reservia" id="logo"/>
 			<div id="conteneur_nav">
+				<div class="box_inscrire">
+					<p><a href="#"><strong>S'inscrire</strong></a></p>
+				</div>
 				<nav>
 					<div class="box_nav">
 						<p><a href="#conteneur_hébergements">Hébergements</a></p>
@@ -24,9 +27,6 @@
 						<p><a href="#conteneur_activités">Activités</a></p>
 					</div>
 				</nav>
-				<div class="box_inscrire">
-					<p><a href="#"><strong>S'inscrire</strong></a></p>
-				</div>
 			</div>
 				
 			
@@ -36,7 +36,7 @@
 			<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
 			<p>En plein centre ville ou en pleine nature</p>
 			<form method="post" action="traitement.php" id="formulaire_recherche"> <!-- Modifier l'attribut action -->
-				<p><label for="barre_recherche"><i class="fas fa-map-marker-alt"></i></label><input type="search" id="barre_recherche" placeholder="Marseille, France"/><input type="submit" value="Rechercher"></p>
+				<p><label for="barre_recherche"><i class="fas fa-map-marker-alt"></i></label><input type="search" id="barre_recherche" placeholder="Marseille, France"/><input id="bouton_recherche_texte" type="submit" value="Rechercher"></p>
 			</form>
 			
 			<div id="conteneur_filtres">
@@ -60,13 +60,13 @@
 			<p id="information"><i class="fas fa-info-circle"></i>Plus de 500 logements sont disponibles dans cette ville</p>
 		</div>
 		
-		<section id="conteneur_hébergements">
+		<section id="conteneur_hebergements">
 			<aside id="populaires">
 				<h2>Les plus populaires<i class="fas fa-chart-line"></i></h2>
 				<div id="liste_populaires">
-					<a href="#" class="Lien populaire">
+					<a href="#" class="Lien_populaire">
 						<div class="Carte_populaire">
-							<img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo de chambre" class="Photo populaire cover" />
+							<img src="images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="Photo de chambre" class="Photo_populaire_cover" />
 							<div class="Legende_populaire">
 								<h3>Hôtel Le soleil du matin</h3>
 								<p>Nuit à partir de 128€</p>
@@ -75,9 +75,9 @@
 						</div>
 					</a>
 					
-					<a href="#" class="Lien populaire">
+					<a href="#" class="Lien_populaire">
 						<div class="Carte_populaire">
-							<img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo de chambre" class="Photo populaire cover" />
+							<img src="images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="Photo de chambre" class="Photo_populaire_cover" />
 							<div class="Legende_populaire">
 								<h3>Au cœur de l'eau Chambres d'hôtes</h3><!--Doit-il se répartir sur deux lignes ? -->
 								<p>Nuit à partir de 71€</p>
@@ -86,9 +86,9 @@
 						</div>
 					</a>
 					
-					<a href="#" class="Lien populaire">
+					<a href="#" class="Lien_populaire">
 						<div class="Carte_populaire">
-							<img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo lit double avec deux lampes" class="Photo populaire cover" />
+							<img src="images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="Photo lit double avec deux lampes" class="Photo_populaire_cover" />
 							<div class="Legende_populaire">
 								<h3>Hôtel Tout bleu et Blanc</h3>
 								<p>Nuit à partir de 68€</p>
@@ -99,7 +99,7 @@
 				</div>
 			</aside>
 			
-			<section id="hébergements_Marseille">
+			<section id="hebergements_Marseille">
 				<h2>Hébergements à Marseille</h2>
 				<div id="liste_hebergements_Marseille">
 					<a href="#" class="Carte_Marseille">
