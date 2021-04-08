@@ -753,6 +753,22 @@ a.Carte_activite_longue
         border-radius: 1rem;
     }
     
+    #conteneur_filtres h2
+    {
+        font-size: 0.8rem;
+    }
+
+    .filtre i
+    {
+        padding: 0.7rem;
+    }
+
+    #barre_recherche
+    {
+        width: 12rem;
+    }
+
+
     /*Activités tél portable */
     a.Carte_activite_longue, .Carte_activite_superieure_col2, .Carte_activite_inferieure_col2, .Carte_activite_superieure_col4, .Carte_activite_inferieure_col4
     {
@@ -774,4 +790,25 @@ a.Carte_activite_longue
     {
         width: auto;
     } 
+}
+
+/* Redimensionnements pour 375 px */
+@media screen and (max-width: 375px)
+{
+    .box_nav
+    {
+        width: 11rem;
+    }
+
+    a.Carte_activite_longue, .Carte_activite_superieure_col2, .Carte_activite_inferieure_col2, .Carte_activite_superieure_col4, .Carte_activite_inferieure_col4
+    {
+        width: 20rem;
+        height: 10rem;
+    }
+    
+    .Photo_activite_longue, .Photo_superieure_col2, .Photo_inferieure_col2, .Photo_activite_superieure_col4, .Photo_activite_inferieure_col4
+    {
+        width: 20rem;
+        height: 8rem;
+    }
 }
