@@ -32,33 +32,22 @@ footer section
 #principal
 {
     display: flex;
-    justify-content: space-between;
-    /* Si position: fixed est actif, modifie la mise en page
-    Problème restant, le reste de la page se met en superposition*/
-    position: static;
-    /* top: 0;
-    left: 0;
-    right: 0;  */
-    /* width: 100%;  */
-    /*Toujours visible */
-    /* z-index: 1;
-    background-color: #FFF; */
-    /* Pour coller le haut du conteneur au haut de la page */
     margin-top: -0.5rem;
-    margin-left: 1rem;
-}
+} 
 
 #logo
 {
     padding-top: 2rem;
+    margin-right: auto;
+
 }
 
 #conteneur_nav
 {
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 30rem; 
+    flex-direction: row;
+    justify-content: flex-start;
+    
 }
 
 nav
@@ -87,11 +76,15 @@ nav
     color: #0065FC;
 }
 
-#conteneur_nav p
+header p
 {
     text-align: center;
 }
 
+.box_inscrire
+{
+    order: 1;
+}
 
 
 /* nav a:focus
@@ -173,6 +166,11 @@ form label
     border-radius: 1rem 0 0 1rem;
 }
 
+#loupe_icone
+{
+    display: none;
+}
+
 /* Ne fonctionne que sur chrome */
 input::placeholder
 {
@@ -188,6 +186,11 @@ input:focus
 {
     display: flex;
     flex-direction: row;
+}
+
+#liste_filtres
+{
+    display: flex;
     flex-wrap: wrap;
 }
 
@@ -451,9 +454,10 @@ input:focus
     display: flex;
     justify-content: space-between;
     margin-bottom: 5rem;
-    /* Alignement avec les bords gauche et droit de l'encart hébergement */
-    margin-right: -1.8rem;
-    margin-left: 1rem; 
+    /* Alignement avec les bords gauche et droit de l'encart hébergement
+    Provoque le défilement horizontal */
+    /* margin-right: -1.8rem;
+    margin-left: 1rem;  */
 }
 
 a.Carte_activite_longue
@@ -582,10 +586,11 @@ a.Carte_activite_longue
 /*-------------------------------------------------------------------------------*/
 /*Version mobile */
 
+/* Intermédiaure tablette */
 @media screen and (max-width: 1280px)
 {
     /*Header mobile */
-    #conteneur_nav
+    /* #conteneur_nav
     {
         flex-direction: column;
     } 
@@ -599,7 +604,18 @@ a.Carte_activite_longue
     .box_nav:nth-child(1)
     {
         border-top: none;
+    } */
+
+    /*Filtres en mobile*/
+    #conteneur_filtres
+    {
+        flex-direction: column;
     }
+
+    #conteneur_filtres div
+    {
+        margin: 0 1rem 0 0;
+    } 
 
     /*Hébergements et populaires mobile */
     #conteneur_hebergements
@@ -607,6 +623,7 @@ a.Carte_activite_longue
         flex-direction: column;
     }
 
+    
     #populaires
     {
         margin: 0;
@@ -619,44 +636,48 @@ a.Carte_activite_longue
         background-color: #FFF;
     }
 
+    
     #liste_hebergements_Marseille
     {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
     }
 
     #liste_hebergements_Marseille a
     {
-        width: 35rem;
+        width: 20rem;
         height: 15rem;
     }
 
+    
     #afficher_plus
     {
         font-size: 1.2rem;
         padding: 1rem 0;
-    }
+    } 
 
     /*Activités version mobile */
     #conteneur_activités
     {
         width: auto;
-        margin: auto;
     }
     
     #liste_activites
     {
         flex-direction: column;
         margin-bottom: 1rem;
+        margin-right: 0;
+        margin-left: 0;
         width: auto;
         align-items: center;
     }
+
     .Triplette
     {
         flex-direction: column;
         height: auto;
         align-items: center;
     }
+
     a.Carte_activite_longue, .Carte_activite_superieure_col2, .Carte_activite_inferieure_col2, .Carte_activite_superieure_col4, .Carte_activite_inferieure_col4
     {
         height: 15rem;
@@ -664,20 +685,93 @@ a.Carte_activite_longue
         margin: 1rem 0;
         flex: 1;
     }
+
     .Photo_activite_longue, .Photo_superieure_col2, .Photo_inferieure_col2, .Photo_activite_superieure_col4, .Photo_activite_inferieure_col4
     {
         height: 11rem;
         width: 35rem;
     }
 
+
+}
+
+/* Mobile : téléphone portable */
+
+@media screen and (max-width: 580px) {
+    /*Réagencement du haut de page */
+    header
+    {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    
+    #logo
+    {
+        padding-top: 0;
+    }
+
+    .box_inscrire
+    {
+        order: 0;
+    }
+
+    nav
+    {
+        width: auto;
+    }
+
+    .box_nav
+    {
+        padding-top: 0;
+        width: 17rem;
+    }
+
+    .box_nav:nth-child(1)
+    {
+        border-top: none;
+        border-bottom: 2px solid #0065FC;
+    }
+
+    .box_nav:nth-child(2)
+    {
+        border-top: none;
+        border-bottom: 2px solid #F2F2F2;
+    }
+
+    /* Modification du bouton de recherche */
+    #bouton_recherche_texte
+    {
+        display: none;
+    }
+
+    #loupe_icone
+    {
+        display: inline;
+        background-color: #0065FC;
+        color: #FFF;
+        padding: 1.2rem 1rem 1.05rem 1rem;
+        border-radius: 1rem;
+    }
+    
+    /*Activités tél portable */
+    a.Carte_activite_longue, .Carte_activite_superieure_col2, .Carte_activite_inferieure_col2, .Carte_activite_superieure_col4, .Carte_activite_inferieure_col4
+    {
+        width: 25rem;
+    }
+    
+    .Photo_activite_longue, .Photo_superieure_col2, .Photo_inferieure_col2, .Photo_activite_superieure_col4, .Photo_activite_inferieure_col4
+    {
+        width: 25rem;
+    }
+    
     /*Pied de page mobile */
     footer
     {
+        align-items: flex-start;
         flex-direction: column;
-        align-items: center;
     }
-    /* footer section
+    footer section
     {
-        width: 30rem;
-    } */
+        width: auto;
+    } 
 }
