@@ -194,11 +194,15 @@ input:focus
     flex-wrap: wrap;
 }
 
-#conteneur_filtres div
+.filtre
 {
-    margin: 0 1rem;
+    margin: 1rem;
     padding: 0;
     border-radius: 2rem;
+    border: 2px solid #F1F1F1;
+    border-left: none;
+    border-radius: 2rem;
+    padding-right: 1rem;
 }
 
 #titre_filtres
@@ -213,13 +217,20 @@ input:focus
 
 #information
 {
-    margin: 0;
+    display: flex;
+    align-items: baseline;
+    font-size : 1rem;
 }
 
 #information i
 {
-    margin: 0 0.5rem;
-}
+    margin: 0 1rem;
+} 
+
+/* #plus
+{
+    margin: auto 0;
+} */
 
 .filtre i
 {
@@ -231,15 +242,7 @@ input:focus
     z-index: 1;
 }
 
-.filtre h2
-{
-    border: 2px solid #F2F2F2;
-    border-left: none;
-    border-radius: 2rem;
-    padding-right: 1rem;
-}
-
-.filtre h2:hover
+.filtre:hover
 {
     background-color: #DEEBFF;
     color: #0065FC;
@@ -271,7 +274,7 @@ input:focus
 #populaires
 {
     background: #F2F2F2;
-    margin: 0 1rem;
+    margin: 0 1.5rem;
     padding: 0 1rem;
     border-radius: 1rem;
     flex: 1;
@@ -456,8 +459,8 @@ input:focus
     margin-bottom: 5rem;
     /* Alignement avec les bords gauche et droit de l'encart hébergement
     Provoque le défilement horizontal */
-    /* margin-right: -1.8rem;
-    margin-left: 1rem;  */
+    /* margin-right: -1.8rem;*/ 
+    margin-left: 1rem;
 }
 
 a.Carte_activite_longue
@@ -467,7 +470,6 @@ a.Carte_activite_longue
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
-    margin: 0;
 }
 
 #liste_activites a
@@ -487,6 +489,7 @@ a.Carte_activite_longue
     display: flex;
     height: 30rem;
     flex: 1;
+    padding: 0;
 }
 
 .Carte_activite_superieure_col2
@@ -612,10 +615,10 @@ a.Carte_activite_longue
         flex-direction: column;
     }
 
-    #conteneur_filtres div
+    .filtre
     {
-        margin: 0 1rem 0 0;
-    } 
+        margin: 0.5rem;
+    }
 
     /*Hébergements et populaires mobile */
     #conteneur_hebergements
@@ -707,12 +710,13 @@ a.Carte_activite_longue
     
     #logo
     {
-        padding-top: 0;
+        padding-top: 1rem;
     }
 
     .box_inscrire
     {
         order: 0;
+        padding: 1rem 0 0 0;
     }
 
     nav
@@ -792,9 +796,16 @@ a.Carte_activite_longue
     } 
 }
 
-/* Redimensionnements pour 375 px */
+/* Redimensionnements et réalignements pour 375 px */
 @media screen and (max-width: 375px)
 {
+    .box_inscrire p
+    {
+        text-align: right;
+        padding-right: 1rem;
+    }
+
+    /* Redimensionnements des cartes */
     .box_nav
     {
         width: 11rem;
