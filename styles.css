@@ -39,7 +39,6 @@ footer section
 {
     padding-top: 2rem;
     margin-right: auto;
-
 }
 
 #conteneur_nav
@@ -47,7 +46,6 @@ footer section
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    
 }
 
 nav
@@ -119,7 +117,7 @@ h1
     justify-content: baseline;
     /*Besoin de le séparer de sous le header */
     padding-bottom: 25px;
-    margin: 0 1rem;
+    /* margin: 0 1rem; */
 }
 
 /* Rapproche tout ce qui est dans le conteneur recherche*/
@@ -274,7 +272,7 @@ input:focus
 #populaires
 {
     background: #F2F2F2;
-    margin: 0 1.5rem;
+    /* margin: 0 1.5rem; */
     padding: 0 1rem;
     border-radius: 1rem;
     flex: 1;
@@ -366,7 +364,7 @@ input:focus
 #hebergements_Marseille
 {
     background-color: #F2F2F2;
-    margin: 0 0.9rem;
+    margin-right: 2rem; 
     padding: 0.9rem;
     border-radius: 1rem;
     flex: 2;
@@ -446,11 +444,10 @@ input:focus
 
 /* Activités à Marseille */
 
-#conteneur_activités h2
+/* #conteneur_activités h2
 {
-    /*Alignement du titre*/
-    margin-left: 1rem;
-}
+    margin-left: 1rem; 
+} */
 
 #liste_activites
 {
@@ -460,7 +457,7 @@ input:focus
     /* Alignement avec les bords gauche et droit de l'encart hébergement
     Provoque le défilement horizontal */
     /* margin-right: -1.8rem;*/ 
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 
 a.Carte_activite_longue
@@ -470,6 +467,7 @@ a.Carte_activite_longue
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
+    /* margin: 0 auto; */
 }
 
 #liste_activites a
@@ -488,8 +486,15 @@ a.Carte_activite_longue
 {
     display: flex;
     height: 30rem;
-    flex: 1;
     padding: 0;
+    justify-content: space-between;
+    width: 45rem;
+}
+
+#Tri_02
+{
+    justify-content: flex-end;
+    width: 40rem;
 }
 
 .Carte_activite_superieure_col2
@@ -527,6 +532,12 @@ a.Carte_activite_longue
     flex-direction: column;
     justify-content: space-between;
     margin: 0 auto;
+}
+
+.Conteneur_deux_cartes.col4
+{
+    margin-right: 0;
+    /* margin-left: auto; */
 }
 
 .Carte_activite_superieure_col4 
@@ -573,6 +584,12 @@ a.Carte_activite_longue
     margin: auto 0;
     padding: 1rem;
     font-size: 1rem;
+}
+
+/*Marges communes */
+#conteneur_page
+{
+    margin: 0 1rem;
 }
 
 /* Contournement pour corriger la photo qui dépasse */
@@ -681,6 +698,11 @@ a.Carte_activite_longue
         align-items: center;
     }
 
+    .Conteneur_deux_cartes.col4
+    {
+        margin-right: auto;
+    }
+
     a.Carte_activite_longue, .Carte_activite_superieure_col2, .Carte_activite_inferieure_col2, .Carte_activite_superieure_col4, .Carte_activite_inferieure_col4
     {
         height: 15rem;
@@ -695,6 +717,10 @@ a.Carte_activite_longue
         width: 35rem;
     }
 
+    #conteneur_page
+    {
+        margin: 0;
+    }
 
 }
 
