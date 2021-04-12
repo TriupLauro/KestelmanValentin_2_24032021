@@ -495,7 +495,7 @@ a.Carte_activite_longue
     border-radius: 1rem 1rem 0 0;
 }
 
-.Triplette
+/* .Triplette
 {
     display: flex;
     height: 30rem;
@@ -508,7 +508,7 @@ a.Carte_activite_longue
 {
     justify-content: flex-end;
     width: 40rem;
-}
+} */
 
 .Carte_activite_superieure_col2
 {
@@ -544,14 +544,14 @@ a.Carte_activite_longue
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
-.Conteneur_deux_cartes.col4
+/* .Conteneur_deux_cartes.col4
 {
     margin-right: 0;
-    /* margin-left: auto; */
-}
+    margin-left: auto;
+} */
 
 .Carte_activite_superieure_col4 
 {
@@ -704,18 +704,18 @@ a.Carte_activite_longue
         align-items: center;
     }
 
-    .Triplette
+    /* .Triplette
     {
         flex-direction: column;
         height: auto;
         width: auto;
         align-items: center;
-    }
+    } */
 
-    .Conteneur_deux_cartes.col4
+    /* .Conteneur_deux_cartes.col4
     {
         margin-right: auto;
-    }
+    } */
 
     a.Carte_activite_longue, .Carte_activite_superieure_col2, .Carte_activite_inferieure_col2, .Carte_activite_superieure_col4, .Carte_activite_inferieure_col4
     {
@@ -825,10 +825,10 @@ a.Carte_activite_longue
         width: 25rem;
     }
 
-    #Tri_02
+    /* #Tri_02
     {
         width: auto;
-    }
+    } */
     
     /*Pied de page mobile */
     footer
