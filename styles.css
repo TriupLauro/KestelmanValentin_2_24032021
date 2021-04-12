@@ -18,7 +18,9 @@ footer
     display: flex;
     justify-content: space-between;
     background-color: rgb(242,242,242);
-    padding: 2rem 1rem;
+    padding: 2rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
     font-size: 0.8rem;
 }
 
@@ -225,6 +227,10 @@ input:focus
 #information i
 {
     margin: 0 1rem;
+    color: #0065FC;
+    padding: 0.25rem 0.5rem;
+    border-radius: 2rem;
+    border: 2px solid #F2F2F2;
 } 
 
 /* #plus
@@ -756,12 +762,13 @@ a.Carte_activite_longue
     nav
     {
         width: auto;
+        margin: 0 -0.5rem;
     }
 
     .box_nav
     {
         padding-top: 0;
-        width: 17rem;
+        width: 18.1rem;
     }
 
     .box_nav:nth-child(1)
@@ -871,7 +878,7 @@ a.Carte_activite_longue
     /* Redimensionnements des cartes */
     .box_nav
     {
-        width: 11rem;
+        width: 11.7rem;
     }
 
     #liste_hebergements_Marseille a
