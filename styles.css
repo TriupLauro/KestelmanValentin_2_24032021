@@ -641,14 +641,15 @@ a.Carte_activite_longue
     /* #conteneur_nav
     {
         flex-direction: column;
-    } 
+    } */
 
 
     #logo
     {
-        padding-top: 0;
+        margin-left: 1rem;
     }
 
+    /*
     .box_nav:nth-child(1)
     {
         border-top: none;
@@ -775,20 +776,31 @@ a.Carte_activite_longue
     .box_inscrire
     {
         order: 0; 
-        /* padding: 1rem 0 0 0; */
+        padding-top: 1rem ;
+        padding-right: 1rem;
+    }
+
+    div.box_inscrire p
+    {
+        text-align: right;
     }
 
     nav
     {
         width: auto;
         /* margin: 0 -0.5rem; */
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
     }
+
+    /* #ancres_page
+    {
+        width: 100vw;
+    } */
 
     .box_nav
     {
         padding-top: 0;
-        /* width: 50vw; */
+        width: 50vw;
     } 
 
     .box_nav:nth-child(1)
@@ -896,10 +908,10 @@ a.Carte_activite_longue
     }
 
     /* Redimensionnements des cartes */
-    .box_nav
+    /* .box_nav
     {
         width: 11.7rem;
-    }
+    } */
 
     #liste_hebergements_Marseille a
     {
