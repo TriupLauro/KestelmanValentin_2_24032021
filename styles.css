@@ -551,7 +551,7 @@ a.Carte_activite_longue
 .Photo_superieure_col2
 {
     height: 14rem;
-    width: 19rem;
+    width: 100%;
     border-radius: 1rem 1rem 0 0;
     object-fit: cover;
 }
@@ -559,13 +559,14 @@ a.Carte_activite_longue
 .Carte_activite_inferieure_col2
 {
     height: 10rem;
+    width: 19rem;
     border-radius: 1rem;
 }
 
 .Photo_inferieure_col2
 {
     height: 6rem;
-    width: 19rem;
+    width: 100%;
     border-radius: 1rem 1rem 0 0;
     object-fit: cover;
 }
@@ -594,7 +595,7 @@ a.Carte_activite_longue
 .Photo_activite_superieure_col4
 {
     height: 10rem;
-    width: 19rem;
+    width: 100%;
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
 }
@@ -602,7 +603,7 @@ a.Carte_activite_longue
 .Photo_activite_inferieure_col4
 {
     height: 9.8rem;
-    width: 19rem;
+    width: 100%;
     object-fit: cover;
     border-radius: 1rem 1rem 0 0;
 }
