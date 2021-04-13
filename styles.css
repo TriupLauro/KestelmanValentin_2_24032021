@@ -3,6 +3,7 @@
 body
 {
     font-family: 'Raleway', sans-serif;
+    margin: 0;
 }
 
 /* Aucun lien n'est souligné */
@@ -19,8 +20,6 @@ footer
     justify-content: space-between;
     background-color: rgb(242,242,242);
     padding: 2rem;
-    margin-left: -0.5rem;
-    margin-right: -0.5rem;
     font-size: 0.8rem;
 }
 
@@ -35,7 +34,6 @@ footer section
 #principal
 {
     display: flex;
-    margin-top: -0.5rem;
 } 
 
 #logo
@@ -56,15 +54,18 @@ nav
     display: flex;
 }
 
+#ancres_page
+{
+    display: flex;
+}
+
  .box_nav, .box_inscrire
 {
     width: 10rem;
     padding-top: 2rem;
     border-top: 2px solid #FFF;
-    /*padding: 0 6%;*/
     /* Faire coïncider la barre bleu avec le haut */
-    /*position: relative;
-    top: -10%;*/
+    /* Plus nécessaire quand on enlève les margin de body */
 } 
 
 .box_nav:nth-child(1)
@@ -209,7 +210,18 @@ input:focus
 
 #titre_filtres
 {
-    margin: auto 0;
+    line-height: 2.3rem;
+}
+
+#liste_filtres i
+{
+    text-align: center;
+    line-height: 2.7rem;
+}
+
+#liste_filtres p
+{
+    font-weight: bold;
 }
 
 #conteneur_filtres h2
@@ -221,7 +233,7 @@ input:focus
 {
     display: flex;
     align-items: baseline;
-    font-size : 1rem;
+    font-size : 0.9rem;
 }
 
 #information i
@@ -240,12 +252,14 @@ input:focus
 
 .filtre i
 {
-    padding: 1rem;
-    margin: 0 1rem 0 0;
+    /* padding: 1rem; */
+    width: 2.7rem;
+    height: 2.7rem;
+    margin: -0.05rem 1rem 0 0;
     border-radius: 2rem;
     color:#0065FC;
     background-color: #DEEBFF;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .filtre:hover
@@ -394,6 +408,7 @@ h2.cache
 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #liste_hebergements_Marseille a
@@ -639,6 +654,10 @@ a.Carte_activite_longue
         border-top: none;
     } */
 
+    #conteneur_recherche
+    {
+        margin: 0 1rem;
+    }
     /*Filtres en mobile*/
     #conteneur_filtres
     {
@@ -745,7 +764,7 @@ a.Carte_activite_longue
     header
     {
         height: auto;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
     }
     
     #logo
@@ -755,32 +774,33 @@ a.Carte_activite_longue
 
     .box_inscrire
     {
-        order: 0;
-        padding: 1rem 0 0 0;
+        order: 0; 
+        /* padding: 1rem 0 0 0; */
     }
 
     nav
     {
         width: auto;
-        margin: 0 -0.5rem;
+        /* margin: 0 -0.5rem; */
+        /* flex-wrap: wrap; */
     }
 
     .box_nav
     {
         padding-top: 0;
-        width: 18.1rem;
-    }
+        /* width: 50vw; */
+    } 
 
     .box_nav:nth-child(1)
     {
         border-top: none;
-        border-bottom: 2px solid #0065FC;
+        border-bottom: 0.2rem solid #0065FC;
     }
 
     .box_nav:nth-child(2)
     {
         border-top: none;
-        border-bottom: 2px solid #F2F2F2;
+        border-bottom: 0.2rem solid #F2F2F2;
     }
 
     /* Modification du bouton de recherche */
@@ -798,15 +818,15 @@ a.Carte_activite_longue
         border-radius: 1rem;
     }
     
-    #conteneur_filtres h2
+    /* #conteneur_filtres h2
     {
         font-size: 0.8rem;
-    }
+    } */
 
-    .filtre i
+    /* .filtre i
     {
         padding: 0.7rem;
-    }
+    } */
 
     #barre_recherche
     {
@@ -871,8 +891,8 @@ a.Carte_activite_longue
     #populaires
     {
         border-radius: 0;
-        width: 21.9rem;
-        margin-left: -1rem;
+        /* width: 21.9rem;
+        margin-left: -1rem; */
     }
 
     /* Redimensionnements des cartes */
