@@ -301,6 +301,13 @@ h2.cache
 
 /* Les plus populaires */
 
+/* .Lien_populaire
+{
+    margin: 0;
+    padding: 0;
+    width: auto;
+} */
+
 .Carte_populaire
 {
     display: flex;
@@ -728,6 +735,7 @@ a.Carte_activite_longue
     {
         font-size: 1.2rem;
         padding: 1rem 0;
+        margin-left: 5vw;
     } 
 
     /*Activités version mobile */
