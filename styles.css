@@ -69,12 +69,12 @@ nav
     /* Plus nécessaire quand on enlève les margin de body */
 } 
 
-.box_nav:nth-child(1)
+.box_nav:hover
 {
     border-top: 2px solid #0065FC;
 }
 
-.box_nav:nth-child(1) a
+.box_nav:hover a
 {
     color: #0065FC;
 }
@@ -355,7 +355,7 @@ h2.cache
     text-align: left;
     margin: 0;
     padding: 0.2rem 1rem;
-    font-size: 1rem;
+    font-size: min(1.2vw, 1rem);
     /*position: absolute;
     left: 0;*/
 }
@@ -441,7 +441,8 @@ h2.cache
 
 #liste_hebergements_Marseille a
 {
-    width: 15rem;
+    width: 27.5%;
+    /*min-width: 10rem;*/
     height: 10rem;
     display: flex;
     justify-content: space-between;
@@ -479,6 +480,7 @@ h2.cache
     text-align: left;
     margin: 0.1rem;
     flex: 1;
+    font-size: min(1rem, 1vw);
 }
 
 .Carte_Marseille .Note
@@ -519,7 +521,8 @@ h2.cache
 a.Carte_activite_longue
 {
     height: 30rem;
-    width: 17rem;
+    max-width: 17rem;
+    width: 20%;
     display: flex;
     flex-direction: column;
     border-radius: 1rem;
@@ -556,7 +559,8 @@ a.Carte_activite_longue
 .Carte_activite_superieure_col2
 {
     height: 18rem;
-    width: 19rem;
+    max-width: 19rem;
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -571,7 +575,8 @@ a.Carte_activite_longue
 .Carte_activite_inferieure_col2
 {
     height: 10rem;
-    width: 19rem;
+    max-width: 19rem;
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -588,6 +593,8 @@ a.Carte_activite_longue
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 20%;
+    max-width: 19rem;
     /* margin: 0 auto; */
 }
 
@@ -600,7 +607,8 @@ a.Carte_activite_longue
 .Carte_activite_superieure_col4 
 {
     height: 14rem;
-    width: 19rem;
+    max-width: 19rem;
+    width: 100%;
     border-radius: 1rem;
 }
 
@@ -622,7 +630,8 @@ a.Carte_activite_longue
 
 .Carte_activite_inferieure_col4
 {
-    width: 19rem;
+    max-width: 19rem;
+    width: 100%;
     height: 14rem;
     border-radius: 1rem;
 }
@@ -664,7 +673,7 @@ a.Carte_activite_longue
 /*Version mobile */
 
 /* Intermédiaure tablette */
-@media screen and (max-width: 1280px)
+@media screen and (max-width: 900px)
 {
     /*Header mobile */
     /* #conteneur_nav
@@ -711,6 +720,11 @@ a.Carte_activite_longue
         margin: 0;
     }
 
+    .Carte_populaire h3, .Carte_populaire p
+    {
+        font-size: 1rem;
+    }
+
     #hebergements_Marseille
     {
         margin: 0;
@@ -721,6 +735,11 @@ a.Carte_activite_longue
     #hebergements_Marseille h2
     {
         margin-left: 5vw;
+    }
+
+    .Carte_Marseille p, .Carte_Marseille h3
+    {
+        font-size : 1rem;
     }
 
     
@@ -777,10 +796,17 @@ a.Carte_activite_longue
         margin-right: auto;
     } */
 
+    .Conteneur_deux_cartes 
+    {
+        width: auto;
+        max-width: none;
+    }
+
     a.Carte_activite_longue, .Carte_activite_superieure_col2, .Carte_activite_inferieure_col2, .Carte_activite_superieure_col4, .Carte_activite_inferieure_col4
     {
         height: 15rem;
         width: 90vw;
+        max-width: none;
         margin: 1rem 0;
         flex: 1;
     }
@@ -843,16 +869,16 @@ a.Carte_activite_longue
         width: 50vw;
     } 
 
-    .box_nav:nth-child(1)
-    {
-        border-top: none;
-        border-bottom: 0.2rem solid #0065FC;
-    }
-
-    .box_nav:nth-child(2)
+    .box_nav
     {
         border-top: none;
         border-bottom: 0.2rem solid #F2F2F2;
+    }
+
+    .box_nav:hover, .box_nav:active
+    {
+        border-top: none;
+        border-bottom: 0.2rem solid #0065FC;
     }
 
     /* Modification du bouton de recherche */
