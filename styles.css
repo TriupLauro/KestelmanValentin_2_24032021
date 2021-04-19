@@ -355,7 +355,12 @@ h2.cache
     text-align: left;
     margin: 0;
     padding: 0.2rem 1rem;
-    font-size: min(1.2vw, 1rem);
+    font-size: 1rem;
+    /* Lignes suivantes toutes nécessaires pour couper le texte */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     /*position: absolute;
     left: 0;*/
 }
@@ -442,7 +447,7 @@ h2.cache
 #liste_hebergements_Marseille a
 {
     width: 27.5%;
-    /*min-width: 10rem;*/
+    min-width: 13rem;
     height: 10rem;
     display: flex;
     justify-content: space-between;
@@ -480,7 +485,10 @@ h2.cache
     text-align: left;
     margin: 0.1rem;
     flex: 1;
-    font-size: min(1rem, 1vw);
+    font-size: 1rem;
+    /* overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
 }
 
 .Carte_Marseille .Note
@@ -670,6 +678,28 @@ a.Carte_activite_longue
 }*/
 
 /*-------------------------------------------------------------------------------*/
+/* Disposition intermédiaire */
+@media screen and (max-width: 1175px) and (min-width: 900px) {
+    #liste_populaires {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 85%;
+    }
+    
+    .Carte_populaire h3, .Carte_populaire p {
+        max-height: 2rem;
+    }
+
+    #hebergements_Marseille {
+        flex: 1.6;
+    }
+
+    #liste_hebergements_Marseille {
+        justify-content: space-around;
+    }
+}
+
 /*Version mobile */
 
 /* Intermédiaure tablette */
